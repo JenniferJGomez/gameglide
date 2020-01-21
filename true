@@ -1,0 +1,2 @@
+      invoke  active_record
+      create    db/migrate/20200121210958_change_review_column_game_rentals.rb
