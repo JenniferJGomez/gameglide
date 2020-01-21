@@ -1,0 +1,2 @@
+class GameRentalsController < ApplicationController
+end
