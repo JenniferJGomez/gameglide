@@ -15,7 +15,7 @@ class GameRentalsController < ApplicationController
 
     def create
         @game_rental = GameRental.create(rental_params)
-        redirect_to game_rentals_path(@game_rental)
+        redirect_to game_rental_path(@game_rental)
     end
 
     def edit

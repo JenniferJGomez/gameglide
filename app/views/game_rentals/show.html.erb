@@ -1,2 +1,7 @@
-<%= @game_rental.user.username%>
-<%= @game_rental.game.title%>
+<div><%= @game_rental.user.username%></div>
+<div><%= @game_rental.game.title%></div>
+<div><%= form_for @game_rental do |f|%>
+<%= f.label "Leave a review (optional)" %>
+<%= f.text_area :content %>
+<% f.submit %>
+<% end %>
