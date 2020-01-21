@@ -1,0 +1,22 @@
+<%= form_for @game do |f|%>
+    <%= f.label "Title Name"%>
+    <%= f.text_field :title%>
+
+
+    <%= f.collection_select(:genre_id, Genre.all, :id, :name, prompt: "Select Genre") %>
+    
+
+    <%= f.label "Multiplayer"%>
+    <%= f.check_box :multiplayer%>
+
+    <%= f.label "Online"%>
+    <%= f.check_box :online%>
+
+    <%= f.label "Gaming Platform"%>
+    <%= f.text_field :platform%>
+
+    <%=f.submit "Submit Game"%>
+<%end%>
+
+
+    
