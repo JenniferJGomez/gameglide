@@ -3,4 +3,5 @@
 <div><%= form_for @game_rental do |f|%>
 <% f.submit %>
 <% end %>
-<%# <%=link_to "Leave a review (optional)", new_review_path?game_rental_id=@game_rental.id %>
+<div>Enjoying the game?</div>
+<%=link_to "Leave a review (optional)", new_game_rental_review_path(@game_rental) %>

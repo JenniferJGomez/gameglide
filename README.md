@@ -1,6 +1,6 @@
 # README
 
-GameGlide App is a physical video game rental service. 
+GameGlide App is a physical video game rental service.
 
 Things you may want to cover:
 
