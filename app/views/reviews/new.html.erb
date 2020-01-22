@@ -1,8 +1,8 @@
 <%=form_tag game_rental_reviews_path do%>
-<label>Enter Review here</label>
-<%= text_area_tag 'review[content]'%>
+<label>Enter Review here</label><br>
+<%= text_area_tag 'review[content]'%><br>
 <label>Rate Game</label>
-<%= select_tag 'review[rating]', options_for_select(1..5)%>
+<%= select_tag 'review[rating]', options_for_select(1..5)%><br>
 <%= submit_tag "Submit"%>
 <%end%>
 

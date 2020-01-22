@@ -6,5 +6,4 @@ class GameRental < ApplicationRecord
     validates :game_id, presence: true 
     
 
-    # validates :review_id, :numericality => true, :allow_nil => true
 end

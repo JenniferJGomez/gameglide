@@ -17,8 +17,11 @@ class ReviewsController < ApplicationController
     @game_rental = GameRental.find(params[:game_rental_id])
     @review = Review.new(review_params)
     @review.game_rental_id = @game_rental.id
+    
     if @review.valid?
       @review.save
+      @game_rental.review_id = @review.id
+      @game_rental.save
       redirect_to games_path
     else
       render :new
