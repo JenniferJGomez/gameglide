@@ -1,8 +1,9 @@
-<%= form_for @review do |f|%>
-<%=f.label :content%>
-<%=f.text_area :content%>
-<%=f.label "Rate Game"%>
-<%=f.select :rating,%>
-<%=f.submit "Submit"%>
+<%=form_tag game_rental_reviews_path do%>
+<label>Enter Review here</label>
+<%= text_area_tag 'review[content]'%>
+<label>Rate Game</label>
+<%= select_tag 'review[rating]', options_for_select(1..5)%>
+<%= submit_tag "Submit"%>
 <%end%>
+
 
