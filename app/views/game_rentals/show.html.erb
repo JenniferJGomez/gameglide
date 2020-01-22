@@ -1,7 +1,6 @@
 <div><%= @game_rental.user.username%></div>
 <div><%= @game_rental.game.title%></div>
 <div><%= form_for @game_rental do |f|%>
-<%= f.label "Leave a review (optional)" %>
-<%= f.text_area :content %>
 <% f.submit %>
 <% end %>
+<%# <%=link_to "Leave a review (optional)", new_review_path?game_rental_id=@game_rental.id %>
