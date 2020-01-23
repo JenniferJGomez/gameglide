@@ -11,7 +11,9 @@ class GameRentalsController < ApplicationController
     
     def new
         @game_rental = GameRental.new
+        @user =[current_user]
     end
+
 
     def create
         
