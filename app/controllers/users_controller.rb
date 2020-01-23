@@ -5,8 +5,14 @@ def index
     @users = User.all 
 end 
 
-def new 
+def new
     @user = User.new 
+   if current_user.nil?
+    render :new
+   else    
+    redirect_to games_path
+   end
+    
 end 
 
 def create 

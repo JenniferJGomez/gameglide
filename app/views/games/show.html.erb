@@ -12,18 +12,6 @@
         <%end%>
     </div><br>
 
-
-<div class="ui label"><i class="pencil alternate icon"></i><%= link_to "Edit Game", edit_game_path(@game)%></div>
-<div class="ui label"><i class="trash alternate icon"></i><%= link_to "Delete Game", game_path(@game), :method => :delete %></div>
-
-
-
-
-
-
-     
- 
-      
-        
-
+<div><%= link_to "Rent This Game", new_game_rental_path %></div>
+<div><%= link_to "Back to Games List", games_path(@game)%></div>
 
