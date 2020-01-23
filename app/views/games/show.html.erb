@@ -1,5 +1,11 @@
 <h1><%= @game.title%> Detail Page</h1>
 <h3>Game Reviews</h3>
+<div class= "wrapper">
+<img class="show_image" src=<%= @game.image %>>
+<%@game.reviews.each do |rev|%>
+    <div class = "review-box"><%= rev.content %> : <%= rev.rating %></div>
+<%end %>
+</div>
 
 
         <%@game.reviews.each do |rev|%>
