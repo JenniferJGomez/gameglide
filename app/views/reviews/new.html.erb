@@ -1,3 +1,7 @@
+
+<% @review.errors.full_messages.each do |msg|%>
+<li><%= msg %></li>
+<% end %>
 <%=form_tag game_rental_reviews_path do%>
 <label>Enter Review here</label><br>
 <%= text_area_tag 'review[content]'%><br>

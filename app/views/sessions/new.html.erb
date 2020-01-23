@@ -1,4 +1,7 @@
-Log in 
+Log in
+<% if flash.notice %>
+    <div class="error"><%= flash.notice %></div>
+<% end %>
  <%=form_tag '/login' do  %>
  <%=text_field_tag :"user[username]"%>
  <%=text_field_tag :"user[password]"%>

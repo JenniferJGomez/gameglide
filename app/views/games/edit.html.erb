@@ -1,2 +1,5 @@
+<% @game.errors.full_messages.each do |msg|%>
+<li><%= msg %></li>
+<% end %> 
 <h1>Edit Game</h1>
 <%=render 'game_form'%>
