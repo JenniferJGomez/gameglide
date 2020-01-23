@@ -1,7 +1,7 @@
 class GamesController < ApplicationController
     before_action :logged_in?
     before_action :get_game, only: [:show, :edit, :update, :destroy]
-    skip_before_action :logged_in?, only: [:index]
+    before_action :authorized, except:[:index]
 
 def index 
   @games = Game.all
@@ -45,8 +45,5 @@ end
 def game_params 
     params.require(:game).permit(:title, :multiplayer, :online, :platform, :genre_id)
 end 
-def logged_in?
-    return head(:forbidden) unless session.include? :user_id
-   
-end
+
 end
