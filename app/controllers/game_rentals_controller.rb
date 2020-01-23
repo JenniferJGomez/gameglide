@@ -15,8 +15,14 @@ class GameRentalsController < ApplicationController
     end
 
     def create
+        
         @game_rental = GameRental.create(rental_params)
+        if @game_rental.valid?
         redirect_to game_rental_path(@game_rental)
+        else 
+            render :new 
+        end 
+
     end
 
     def edit

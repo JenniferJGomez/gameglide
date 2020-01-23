@@ -5,7 +5,11 @@ class SessionsController < ApplicationController
 
     def create
         @user = User.find_by(username: params[:user][:username])
+<<<<<<< HEAD
         if @user && @user.authenticate(params[:user][:password])
+=======
+        if @user && @user.authenticate(params[:user][:pasword])
+>>>>>>> 729241cc48530bffcd5ef5d4c9a99a5f4550cfbb
             session[:user_id]= @user.id
             redirect_to games_path
         else

@@ -14,7 +14,7 @@ def create
     session[:user_id]= @user.id
     if 
     @user.save 
-    redirect_to user_path(@user)
+    redirect_to games_path
         
     else
         render :new
