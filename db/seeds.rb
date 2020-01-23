@@ -10,9 +10,9 @@ Genre.destroy_all
 Game.destroy_all
 GameRental.destroy_all
 
-user1 = User.create(username: "Mansour")
-user2 = User.create(username: "Jenny")
-user3 = User.create(username: "Marija")
+user1 = User.create(username: "Mansour",password: "1234")
+user2 = User.create(username: "Jenny",password: "1235")
+user3 = User.create(username: "Marija",password: "1236")
 
 rpg = Genre.create(name: "RPG")
 shooter = Genre.create(name: "Shooter")
