@@ -1,5 +1,6 @@
 <h1><%= @game.title%> Detail Page</h1>
 <h3>Game Reviews</h3>
+<%= image_tag @game.image %>
 <%@game.reviews.each do |rev|%>
     <div class = "review-box"><%= rev.content %> : <%= rev.rating %></div>
 <%end%>

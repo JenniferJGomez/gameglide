@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+ .gallery {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.gallery-image {
+    width: 200px;
+    height: 200px;
+}
