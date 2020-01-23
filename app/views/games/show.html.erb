@@ -1,7 +1,10 @@
 <h1><%= @game.title%> Detail Page</h1>
 <h3>Game Reviews</h3>
+
+
 <%@game.reviews.each do |rev|%>
-    <div class = "review-box"><%= rev.content %> : <%= rev.rating %></div>
+    <div class = "review-box">Review: <%= rev.content %> </div>
+    <div>Rating: <%= rev.rating %></div>
 <%end%>
 
 
