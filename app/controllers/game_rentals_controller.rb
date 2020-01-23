@@ -1,10 +1,11 @@
 class GameRentalsController < ApplicationController
-
+  
     before_action :get_rental, only: [:show, :edit, :update, :destroy]
 
     def index
-        @game_rentals = GameRental.all 
+        @game_rentals =GameRental.all
     end
+    
 
     def show
     end

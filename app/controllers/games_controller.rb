@@ -1,9 +1,11 @@
 class GamesController < ApplicationController
+    before_action :logged_in?
     before_action :get_game, only: [:show, :edit, :update, :destroy]
 
 def index 
-  @games = Game.all 
-end 
+  @games = current_user.all
+end
+
 
 def new 
     @game = Game.new 
