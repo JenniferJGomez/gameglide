@@ -7,8 +7,6 @@
     <div>Rating: <%= rev.rating %></div>
 <%end%>
 
-
-<div><%= link_to "Edit Game", edit_game_path(@game)%></div>
-<div><%= link_to "Delete Game", game_path(@game), :method => :delete %></div>
-
+<div><%= link_to "Rent This Game", new_game_rental_path %></div>
+<div><%= link_to "Back to Games List", games_path(@game)%></div>
 
