@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
        current_user
     end
     def authorized
-        redirect_to "/signup" unless current_user
+        redirect_to "/signup" unless logged_in?
     end  
 
 end
