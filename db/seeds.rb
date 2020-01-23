@@ -26,11 +26,10 @@ strategy = Genre.create(name: "Strategy")
 mmo = Genre.create(name: "MMO")
 casual = Genre.create(name: "casual")
 
-game1 = Game.create(title: "Call of Duty: Modern Warfare", multiplayer: true, online: true, platform: "PS4", genre: shooter)
-game2 = Game.create(title: "Astral Chain", multiplayer: false, online: false, platform: "Nintendo Switch", genre: rpg)
-game3 = Game.create(title: "Nier Automata", multiplayer: false, online: false, platform: "PS4", genre: rpg)
+game1 = Game.create(title: "Call of Duty: Modern Warfare", multiplayer: true, online: true, platform: "PS4", genre: shooter, image: "https://specials-images.forbesimg.com/imageserve/5ce8218fcd1f12000a2a49a4/960x0.jpg?fit=scale")
+game2 = Game.create(title: "Astral Chain", multiplayer: false, online: false, platform: "Nintendo Switch", genre: rpg, image: "https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_AstralChain_image1600w.jpg" )
+game3 = Game.create(title: "Nier Automata", multiplayer: false, online: false, platform: "PS4", genre: rpg, image: "https://nowcdkey.com/wp-content/uploads/2019/06/62077917_367313817245224_1300320701986635776_n.jpg")
 
 # r1 = Review.create(content: "Great!", rating: 5)
 
 
-gr2 = GameRental.create!(user: user2, game: game3)

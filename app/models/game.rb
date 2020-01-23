@@ -5,8 +5,8 @@ class Game < ApplicationRecord
     has_many :reviews, through: :game_rentals
     belongs_to :genre 
     validates :title, presence: true 
-    validates :multiplayer, presence: true 
-    validates :online, presence: true 
+    validates :multiplayer, inclusion: { in:[true, false]} 
+    validates :online, inclusion: {in: [true, false]}
     validates :platform, presence: true 
     
     
