@@ -3,18 +3,20 @@
 
 
         <%@game.reviews.each do |rev|%>
-            <div><%=rev.game_rental.user.username%></div>
+            <div class="ui section divider"><%=rev.game_rental.user.username%>
             <div>Review: <%= rev.content %> </div>
             <div>Rating:<% rev.rating.times do%>
                 <i class="yellow star icon"></i>
             <%end%>
                 </div>
         <%end%>
+    </div><br>
 
 
+<div class="ui label"><i class="pencil alternate icon"></i><%= link_to "Edit Game", edit_game_path(@game)%></div>
+<div class="ui label"><i class="trash alternate icon"></i><%= link_to "Delete Game", game_path(@game), :method => :delete %></div>
 
-<%= link_to "Edit Game", edit_game_path(@game)%><br>
-<%= link_to "Delete Game", game_path(@game), :method => :delete %><br>
+
 
 
 
