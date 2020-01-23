@@ -6,12 +6,22 @@
     <%= csp_meta_tag %>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   </head>
 
   <body>
+    <% unless 1 == 1 && 1 == 2 %>
+      <% if current_user %>
+        <div class="header">
+          <div>Welcome, <%= current_user.username.titlecase %> </div>
+          <div><%= link_to "Logout", logout_path %></div>
+        </div>
+      <% else %>
+        <div><%=link_to "Login", login_path%></div>
+      <% end %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

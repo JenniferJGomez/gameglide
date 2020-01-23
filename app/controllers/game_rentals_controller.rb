@@ -5,9 +5,8 @@ class GameRentalsController < ApplicationController
     def index
         @game_rentals =GameRental.all
     end
-    
-
     def show
+        
     end
     
     def new
