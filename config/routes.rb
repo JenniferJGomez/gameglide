@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :games
   resources :game_rentals do
-    resources :reviews, :only => [:create, :index, :new]
+    resources :reviews, :only => [:create, :index, :new, :destroy]
   end
   resources :users, except: [:new]
   get '/signup',to: "users#new", as: "new_user"
