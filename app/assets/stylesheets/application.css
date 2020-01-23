@@ -24,3 +24,17 @@
     width: 200px;
     height: 200px;
 }
+
+.show-image {
+    height: auto; 
+    width: auto; 
+    max-width: 300px; 
+    max-height: 300px;
+}
+
+.wrapper {
+    margin: 50px 100px;
+    padding: 20px;
+    max-width: 100px;
+
+}

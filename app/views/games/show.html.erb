@@ -1,9 +1,11 @@
 <h1><%= @game.title%> Detail Page</h1>
 <h3>Game Reviews</h3>
-<%= image_tag @game.image %>
+<div class= "wrapper">
+<img class="show_image" src=<%= @game.image %>>
 <%@game.reviews.each do |rev|%>
     <div class = "review-box"><%= rev.content %> : <%= rev.rating %></div>
-<%end%>
+<%end %>
+</div>
 
 
 <div><%= link_to "Edit Game", edit_game_path(@game)%></div>

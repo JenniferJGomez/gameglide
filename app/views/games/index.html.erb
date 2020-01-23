@@ -4,7 +4,9 @@
 <% @games.each do |game|%>
 <%= link_to game_path(game) do %>
 <%= image_tag game.image, class: "gallery-image" %>
+<%= game.title%>
 <% end %>
+
 <% end %>
 </div>
 
