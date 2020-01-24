@@ -15,7 +15,7 @@
     <div>Rating:<% rev.rating.times do%>
         <i class="yellow star icon"></i>
     <%end%><br>
-    <%= link_to "Delete Review", game_rental_review_path(rev), :method => :delete %>
+    <%= link_to "Delete Review", game_rental_review_path(rev.game_rental.id, rev), :method => :delete %>
     </div>
     
 <%end%>
