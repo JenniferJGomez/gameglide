@@ -1,8 +1,12 @@
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Anton|Bangers&display=swap" rel="stylesheet">
+</head>
+
 <body class = "rental-body">
 
 <div class = "rental-box">
 
-<h1><div><%= @game_rental.user.username%>'s Current Rental</div></h1>
+<h1><div> Enjoy Your Rental <%= @game_rental.user.username%>!</div></h1>
 <h3>Currently Playing 🎮:<div class = "rental-div"><%= @game_rental.game.title%>
 on <%=@game_rental.game.platform%>
 </div></h3>
@@ -16,3 +20,4 @@ on <%=@game_rental.game.platform%>
 </div>
 
 </body>
+

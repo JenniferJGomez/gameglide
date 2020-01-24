@@ -1,20 +1,26 @@
-<h1> <%= @user.username %>'s Detail Page</h1>
+<div class = "user-profile">
+
+<h1> <%= @user.username %>'s Profile</h1>
 
 <h2>Current rentals</h2>
 <p> <% @user.game_rentals.each do |rental|%> </p>
     <%=rental.game.title%>
 <%end%>
 
-<h2>Reviews</h2>
+<h2><%= @user.username %>'s Reviews</h2>
 
 <% @user.reviews.each do |rev|%>
     <div><%= rev.game_rental.game.title%></div>
     <div>Review: <%= rev.content %> </div>
     <div>Rating:<% rev.rating.times do%>
         <i class="yellow star icon"></i>
-    <%end%>
-    </div>
+    <%end%><br>
     <%= link_to "Delete Review", game_rental_review_path(rev), :method => :delete %>
+    </div>
+    
 <%end%>
 </div><br>
 
+<div class = "user-profile"><button class="ui button"><%= link_to "Back to games", games_path%></button></div>
+
+</div>
