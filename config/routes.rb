@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :reviews, :only => [:create, :index, :new, :destroy]
   end
   resources :users, except: [:new]
+  get "/", to: "application#home", as: "home"
   get '/signup',to: "users#new", as: "new_user"
 
   #  Session routes

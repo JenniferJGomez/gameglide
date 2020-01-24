@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+.background{ 
+    
+}
  .gallery {
     margin: 20px;
     display: grid;
@@ -38,3 +42,7 @@
     max-width: 100px;
 
 }
+#navbar {
+    margin-bottom: 0px;
+}
+

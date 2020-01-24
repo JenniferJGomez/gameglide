@@ -1,29 +1,25 @@
-<h1><%= @game.title%> Detail Page</h1>
+<h1><%= @game.title%></h1>
 <% if @game.avatar.attached?%>
 <image src="<%=(url_for(@game.avatar))%>">
-<%end%>
+ <%end%>
 
-<h2>Genre: <%=@game.genre.name%></h2>
+<h3>Genre: <%=@game.genre.name%></h3>
 
 
-
-<div class= "wrapper">
-<img class="show_image" src=<%= @game.image %>>
-</div>
-
-<h3>Game Reviews</h3>
-        <%@game.reviews.each do |rev|%>
-            <div class="ui section divider"><%=rev.game_rental.user.username%>
-            <div>Review: <%= rev.content %> </div>
-            <div>Rating:<% rev.rating.times do%>
-                <i class="yellow star icon"></i>
-            <%end%>
-                </div>
-        <%end%>
-    </div><br>
-
-<div class="gameindexlinks1"><button class="ui button"><%= link_to "Rent Our Games", new_game_rental_path %></button></div>
+       
+<div class="gameindexlinks1"><button class="ui button"><%= link_to "Rent this Game", new_game_rental_path %></button></div>
 <div class="gameindexlinks2"><button class="ui button"><%= link_to "Back to Games List", games_path(@game)%></button></div>
+
+      </div>
+    </div>
+  </div>
+
+ 
+   
+
+
+
+
 
 
 
