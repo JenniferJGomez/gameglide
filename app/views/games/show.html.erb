@@ -6,9 +6,18 @@
 <h3>Genre: <%=@game.genre.name%></h3>
 
 
-       
-<div class="gameindexlinks1"><button class="ui button"><%= link_to "Rent this Game", new_game_rental_path %></button></div>
+  
+    
+       <div class="card" style="width: 45rem;">
+  <img src=<%= @game.image%> class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= @game.title %> </h5>
+    <p class="card-text"></p>
+    <div class="gameindexlinks1"><button class="ui button"><%= link_to "Rent this Game", new_game_rental_path %></button></div>
 <div class="gameindexlinks2"><button class="ui button"><%= link_to "Back to Games List", games_path(@game)%></button></div>
+  </div>
+</div>
+
 
       </div>
     </div>
