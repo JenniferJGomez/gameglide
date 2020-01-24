@@ -1,7 +1,18 @@
-<div><%= @game_rental.user.username%></div>
-<div><%= @game_rental.game.title%></div>
-<div><%= form_for @game_rental do |f|%>
-<% f.submit %>
-<% end %>
-<div>Enjoying the game?</div>
-<%=link_to "Leave a review (optional)", new_game_rental_review_path(@game_rental) %>
+<body class = "rental-body">
+
+<div class = "rental-box">
+
+<h1><div><%= @game_rental.user.username%>'s Current Rental</div></h1>
+<h3>Currently Playing 🎮:<div class = "rental-div"><%= @game_rental.game.title%>
+on <%=@game_rental.game.platform%>
+</div></h3>
+
+<div class = "review-div">Enjoying the game?
+<%=link_to "Leave a review", new_game_rental_review_path(@game_rental) %>
+</div>
+
+<div class = "rental-button"><button class="ui button"><%= link_to "Go back to games", games_path%></button></div>
+
+</div>
+
+</body>
