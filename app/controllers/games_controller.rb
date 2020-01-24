@@ -43,7 +43,7 @@ def get_game
 end 
 
 def game_params 
-    params.require(:game).permit(:title, :multiplayer, :online, :platform, :genre_id)
+    params.require(:game).permit(:title, :multiplayer, :online, :platform, :genre_id, :avatar)
 end 
 
 end

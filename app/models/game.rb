@@ -1,5 +1,5 @@
 class Game < ApplicationRecord
-
+    has_one_attached :avatar
     has_many :game_rentals 
     has_many :users, through: :game_rentals
     has_many :reviews, through: :game_rentals
