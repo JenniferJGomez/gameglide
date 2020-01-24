@@ -2,12 +2,14 @@
 <% @review.errors.full_messages.each do |msg|%>
 <li><%= msg %></li>
 <% end %>
+<div class = "review-box"><h2>Leave a review below:</h2>
 <%=form_tag game_rental_reviews_path do%>
-<label>Enter Review here</label><br>
-<%= text_area_tag 'review[content]'%><br>
-<label>Rate Game</label>
+<%= text_area_tag 'review[content]', "", class: "text_area_tag"%><br>
+<h3>Rate Game</h3>
 <%= select_tag 'review[rating]', options_for_select(1..5)%><br>
-<%= submit_tag "Submit"%>
+<div class = "review-button"><%= submit_tag "Submit"%></div>
 <%end%>
+</div>
+
 
 
