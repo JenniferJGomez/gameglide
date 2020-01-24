@@ -1,14 +1,27 @@
-<h1><%= @game.title%> Detail Page</h1>
-<h3>Game Reviews</h3>
-<div class= "wrapper">
-<img class="show_image" src=<%= @game.image %>>
-<%@game.reviews.each do |rev|%>
-    <div class = "review-box"><%= rev.content %> : <%= rev.rating %></div>
-<%end %>
-</div>
+<h1><%= @game.title%></h1>
+
+<div class= "card large">
+  
+    <div class="card blue-grey lighten-4">  
+      <div class="card-image">             
+        <img src=<%= @game.image %>>     
+      </div>
+      <div class="card-content">            
+        <p><%= link_to "Edit Game", edit_game_path(@game)%><br><br> <%= link_to "Delete Game", game_path(@game), :method => :delete %></p>
+        <%@game.reviews.each do |rev|%>
+        <div class = "review-box"><%= rev.content %> : <%= rev.rating %></div>
+        <%end%>
+
+      </div>
+    </div>
+  </div>
+
+ 
+   
 
 
-<div><%= link_to "Edit Game", edit_game_path(@game)%></div>
-<div><%= link_to "Delete Game", game_path(@game), :method => :delete %></div>
+<div></div>
+<div>
+
 
 

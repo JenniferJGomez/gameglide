@@ -12,6 +12,18 @@
   </head>
 
   <body>
+   <div class="container">
+        <nav>
+    <div class="nav-wrapper blue-grey darken-1">
+      <a href="#" class="brand-logo center">Game Glide</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <%= link_to "Games", games_path%>
+        <%# for later add profile page%>
+      </ul>
+    </div>
+  </nav>
+  
     <%= yield %>
+    </div>
   </body>
 </html>
