@@ -5,14 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.destroy_all 
+
 Genre.destroy_all
 Game.destroy_all
 GameRental.destroy_all
 
-user1 = User.create(username: "Mansour",password: "1234")
-user2 = User.create(username: "Jenny",password: "1235")
-user3 = User.create(username: "Marija",password: "1236")
+
 
 rpg = Genre.create(name: "RPG")
 shooter = Genre.create(name: "Shooter")

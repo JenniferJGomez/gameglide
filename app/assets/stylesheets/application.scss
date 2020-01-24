@@ -13,9 +13,10 @@
  *= require_tree .
  *= require_self
  */
- @import "materialize";
 
-
+.background{ 
+    
+}
  .gallery {
     margin: 20px;
     display: grid;
@@ -29,10 +30,10 @@
 }
 
 .show-image {
-    height: auto; 
-    width: auto; 
-    max-width: 300px; 
-    max-height: 300px;
+    max-width: 600;
+    max-height: 300;
+    width: auto;
+    height: auto;
 }
 
 .wrapper {

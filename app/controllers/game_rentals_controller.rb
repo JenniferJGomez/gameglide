@@ -5,14 +5,15 @@ class GameRentalsController < ApplicationController
     def index
         @game_rentals =GameRental.all
     end
-    
-
     def show
+        
     end
     
     def new
         @game_rental = GameRental.new
+        @user =[current_user]
     end
+
 
     def create
         

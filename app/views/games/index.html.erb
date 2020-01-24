@@ -1,12 +1,19 @@
 <h1> Games List </h1>
 
+
+
+
 <div class ="gallery">
 <% @games.each do |game|%>
 <%= link_to game_path(game) do %>
 <%= image_tag game.image, class: "gallery-image" %>
 <%= game.title%>
 <% end %>
+
+
 <% end %>
 </div>
+<div class="gameindexlinks1"><button class="ui button"><%= link_to "Add New Game", new_game_path(@game)%></button></div>
+<div class="gameindexlinks2"><button class="ui button"><%= link_to "Back to SignUp/Login Page", '/login'%></button></div>
 
 

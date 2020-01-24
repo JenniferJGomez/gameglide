@@ -1,16 +1,14 @@
 <h1><%= @game.title%></h1>
+<% if @game.avatar.attached?%>
+<image src="<%=(url_for(@game.avatar))%>">
+ <%end%>
 
-<div class= "card large">
-  
-    <div class="card blue-grey lighten-4">  
-      <div class="card-image">             
-        <img src=<%= @game.image %>>     
-      </div>
-      <div class="card-content">            
-        <p><%= link_to "Edit Game", edit_game_path(@game)%><br><br> <%= link_to "Delete Game", game_path(@game), :method => :delete %></p>
-        <%@game.reviews.each do |rev|%>
-        <div class = "review-box"><%= rev.content %> : <%= rev.rating %></div>
-        <%end%>
+<h3>Genre: <%=@game.genre.name%></h3>
+
+
+       
+<div class="gameindexlinks1"><button class="ui button"><%= link_to "Rent this Game", new_game_rental_path %></button></div>
+<div class="gameindexlinks2"><button class="ui button"><%= link_to "Back to Games List", games_path(@game)%></button></div>
 
       </div>
     </div>
@@ -20,8 +18,8 @@
    
 
 
-<div></div>
-<div>
+
+
 
 
 

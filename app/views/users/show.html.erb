@@ -1,5 +1,20 @@
-<h1> <%= @user.username %>'s Current Rentals</h1>
+<h1> <%= @user.username %>'s Detail Page</h1>
 
+<h2>Current rentals</h2>
 <p> <% @user.game_rentals.each do |rental|%> </p>
     <%=rental.game.title%>
 <%end%>
+
+<h2>Reviews</h2>
+
+<% @user.reviews.each do |rev|%>
+    <div><%= rev.game_rental.game.title%></div>
+    <div>Review: <%= rev.content %> </div>
+    <div>Rating:<% rev.rating.times do%>
+        <i class="yellow star icon"></i>
+    <%end%>
+    </div>
+    <%= link_to "Delete Review", game_rental_review_path(rev), :method => :delete %>
+<%end%>
+</div><br>
+
