@@ -13,7 +13,7 @@ RSpec.describe User, type: :model do
       @user = User.create(name: "Marija", password: "1234")
     end 
     it 'to user pages' do
-      visit "/userss/#{@user.id}"
+      visit "/users/#{@user.id}"
       expect(page.status_code).to eq(200)
     end 
   end
